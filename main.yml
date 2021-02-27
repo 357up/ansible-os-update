@@ -9,5 +9,5 @@
     - { role: freebsd, when: ansible_os_family == "FreeBSD" }
     - { role: smartos, when: ansible_os_family == "Solaris" and ansible_distribution == "SmartOS" }
   handlers:
-    - include: handlers/logging.yml
-    - include: handlers/reboot.yml
+    - import_tasks: handlers/logging.yml
+    - import_tasks: handlers/reboot.yml
