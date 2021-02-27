@@ -1,4 +1,4 @@
-- include: facts.yml
+- import_tasks: facts.yml
 
 - name: Update Systems
   hosts: "{{ hosts }}"
