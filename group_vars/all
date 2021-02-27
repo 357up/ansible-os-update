@@ -13,3 +13,6 @@ old_kernel_history_count: 3
 
 # free-bsd version
 freeBSD_version: "11.2"
+
+# Start Cluster Pi nodes
+start_nodes: false

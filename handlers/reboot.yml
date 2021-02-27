@@ -20,3 +20,12 @@
     timeout: "{{ reboot_timeout }}"
   when:
   - wait_for_host_after_reboot
+  notify:
+  - start-nodes
+
+- name: start-nodes
+  command: /sbin/clusterctrl on
+  changed_when: true
+  failed_when: false
+  when:
+  - start_nodes
