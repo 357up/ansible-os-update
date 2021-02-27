@@ -27,5 +27,7 @@
   command: /sbin/clusterctrl on
   changed_when: true
   failed_when: false
+  debug:
+    msg: "Starting up Cluster Pi nodes"
   when:
   - start_nodes
