@@ -1,7 +1,7 @@
 - include: facts.yml
 
 - name: Update Systems
-  hosts: all
+  hosts: "{{ hosts }}"
   become: true
   roles:
     - { role: debian, when: ansible_os_family == "Debian" }
