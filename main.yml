@@ -1,4 +1,4 @@
-- import_tasks: facts.yml
+- import_playbook: facts.yml
 
 - name: Update Systems
   hosts: "{{ hosts }}"
