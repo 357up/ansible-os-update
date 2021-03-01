@@ -21,13 +21,19 @@
   when:
   - wait_for_host_after_reboot
   notify:
+  - start-nodes-debug
+
+- name: start-nodes-debug
+  debug:
+    msg: "Starting up Cluster Pi nodes"
+  when:
+  - start_nodes
+  notify:
   - start-nodes
 
 - name: start-nodes
   command: /sbin/clusterctrl on
   changed_when: true
   failed_when: false
-  debug:
-    msg: "Starting up Cluster Pi nodes"
   when:
   - start_nodes
