@@ -1,5 +1,5 @@
 - name: Get some needed facts and prepare for playbook
-  hosts: all
+  hosts: '{{ hosts }}'
   become: false
   tasks:
   - name: set ssh port to wait for if reboot is required
